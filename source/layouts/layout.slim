@@ -1,0 +1,42 @@
+html
+  head
+    meta charset="utf8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UI-Compatible"
+    title = current_page.data.title || "Castable Help"
+    = stylesheet_link_tag "all"
+    = javascript_include_tag "all"
+  body
+    header.header
+      .wrapper
+        nav: ul
+          li = link_to "Home", "https://www.castable.co/"
+          li = link_to "The Story", "https://www.castable.co/the-story"
+          li = link_to "Dashboard", "https://www.castable.co/login"
+
+        h1 
+          = link_to "http://help.castable.co" do
+            = image_tag "castable_logo_horizontal.png"
+            |    help
+
+    == yield
+
+    footer.footer
+      .footer-links
+        ul
+          li: h3 Content
+          li = link_to "Home", "https://www.castable.co/"
+          li = link_to "The Story", "https://www.castable.co/the-story"
+          li = link_to "Dashboard", "https://www.castable.co/login"
+        ul
+          li: h3 Follow us
+          li = link_to "Facebook", "https://www.facebook.com/castable"
+          li = link_to "Twitter", "https://www.twitter.com/CastableCo"
+        ul
+          li: h3 Legal
+          li = link_to "Terms of Service", "https://www.castable.co/terms-of-service"
+          li = link_to "Privacy Policy", "https://www.castable.co/privacy-policy"
+
+
+      hr
+      p &copy; 2014 Castable. All rights reserved.
+    

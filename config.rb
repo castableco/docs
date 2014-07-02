@@ -11,6 +11,8 @@
 # Page options, layouts, aliases and proxies
 ###
 
+activate :directory_indexes
+
 # Per-page layout changes:
 #
 # With no layout
@@ -36,9 +38,9 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -55,6 +57,7 @@ set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
+
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
